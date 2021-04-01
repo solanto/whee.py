@@ -59,4 +59,10 @@ During the visualization, hit the spacebar to switch from shadows to normals.
 python whee.py COM5
 ```
 
+## editing
+
+The visualization Python source is just `/whee.py`. I kept as much of the more IO-focused code as general as possible, and thehttps://www.ursinaengine.org/) graphics engine is a joy to use. Have fun!
+
+The Arduino source can be found at `/src/main.ino`. There, you can change outputs from the Arduino. Open it with any editor and build or compile with PlatformIO (or even with the integrated VS Code extension). Alternatively, open it in the Arduino IDE (which will ask you to move it to a new folder). As currently configured, the Arduino's outputs work well with the serial plotter.
+
 
