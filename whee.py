@@ -1,38 +1,42 @@
 import argparse
 from io import TextIOWrapper, BufferedRWPair
 from serial import Serial
+from serial.tools.list_ports import comports
 from ursina import *
 from ursina import curve, shaders
 
+def get_arduino_port():
+    return next(port.device for port in comports() if "Arduino" in port.description)
+
 parser = argparse.ArgumentParser()
 
-parser.add_argument("port",
-    help = "the id of the port the device is on"
+parser.add_argument("--port", "-p",
+    help = "the id of the port the device is on (default: guess)",
 )
 
 parser.add_argument("--baud", "-b",
-    help    = "the device's serial baudrate",
+    help    = "the device's serial baudrate (default: 9600)",
     default = 9600
 )
 
 parser.add_argument("--delimiter", "-d",
-    help    = "the csv-style delimiter",
+    help    = 'the csv-style delimiter (you may need to enter this in quotes; default: ",")',
     default = ","
 )
 
 parser.add_argument("--sample-rate", "-s",
-    help = "the rate at which the device sends output (Hz)",
+    help = "the rate in Hz at which the device sends output (default: 8000)",
     default = 8000                    
 )
 
 parser.add_argument("--ready-flag", "-f",
-    help    = "any unique part of the serial output string that signals the that the device is done calibrating",
+    help    = "any unique part of the serial output string that signals the that the device is done calibrating (default: pitch)",
     default = "pitch"
 )
 
 args = parser.parse_args()
 
-port        = args.port
+port        = get_arduino_port() if not args.port or args.port == "guess" else args.port
 baud        = args.baud
 delimiter   = args.delimiter
 sample_rate = args.sample_rate
@@ -80,7 +84,7 @@ class Spinner(Entity):
         )
         
         self.data_display = Text(
-            text     = "ψ =    0.00     θ =    0.00     φ =    0.00",
+            text     = "ψ =    0.00°    θ =    0.00°    φ =    0.00°",
             origin   = (0, -1),
             position = window.bottom,
             font     = "FiraMono.ttf"
@@ -104,7 +108,7 @@ class Spinner(Entity):
         φ =  φ_raw
         
         self.data_display.text = (
-            "ψ = {:>7.2f}     θ = {:>7.2f}     φ = {:>7.2f}"
+            "ψ = {:>7.2f}°    θ = {:>7.2f}°    φ = {:>7.2f}°"
         ).format(ψ, θ, φ)
         
         self.animate_rotation((ψ, θ, φ), sample_time, curve=curve.in_out_sine)

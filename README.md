@@ -12,7 +12,7 @@ To make things easier, ensure Python is [in your PATH](https://datatofish.com/ad
 
 Clone or download and unzip this repository. Then, navigate to the project's root directory in a terminal.
 
-This might be something like:
+If you've decided to keep the folder in your downloads, this might be something like:
 
 ```shell
 cd ~/Downloads/whee
@@ -39,24 +39,34 @@ pio run -t upload
 
 ## use
 
-The following command runs the visualization:
+A command in the following form runs the visualization:
 
 ```shell
-python whee.py [-h] [--baud BAUD] [--delimiter DELIMITER] [--sample-rate SAMPLE_RATE] [--ready-flag READY_FLAG] port
+whee.py [-h] [--port PORT] [--baud BAUD] [--delimiter DELIMITER] [--sample-rate SAMPLE_RATE] [--ready-flag READY_FLAG]
 ```
 
-You can easily find the Arduino's port using PlatformIO.
+During the visualization, hit the spacebar to switch coloring from shadows to normals.
+
+### examples
+
+To use default settings and let the program guess the right port (this should work in many cases):
+
+```shell
+python whee.py
+```
+
+To tell the program you want Windows port COM5 and a baudrate of 4800:
+
+```powershell
+python whee.py -p COM5 -b 4800
+```
+
+#### finding the arduino's port
+
+You can find the Arduino's port yourself using your system's device manager, the Arduino IDE, or PlatformIO:
 
 ```shell
 pio device list
-```
-
-During the visualization, hit the spacebar to switch from shadows to normals.
-
-### example - windows
-
-```powershell
-python whee.py COM5
 ```
 
 ## editing & debugging
