@@ -1,4 +1,4 @@
-# whee
+# whee.py
 
 An interactive visualization using an MPU-6050's gyroscope data as recorded by an Arduino.
 
@@ -18,7 +18,7 @@ This might be something like:
 cd ~/Downloads/whee
 ```
 
-I recommend starting setup by making a virtual environment.
+I recommend starting setup by making a virtual environment for Python installs. This helps avoid conflicts with other Python software.
 
 ```shell
 python -m venv env
@@ -59,8 +59,10 @@ During the visualization, hit the spacebar to switch from shadows to normals.
 python whee.py COM5
 ```
 
-## editing
+## editing & debugging
 
 The visualization Python source is just `/whee.py`. I kept as much of the more IO-focused code as general as possible, and the [Ursina](https://www.ursinaengine.org/) graphics engine is a joy to use. Have fun!
 
-The Arduino source can be found at `/src/main.ino`. There, you can change outputs from the Arduino. Open it with any editor and build or compile with PlatformIO (or even with the integrated VS Code extension). Alternatively, open it in the Arduino IDE (which will ask you to move it to a new folder). As currently configured, the Arduino's outputs work well with the serial plotter.
+The Arduino source can be found at `/src/main.ino`. There, you can change outputs from the Arduino. Open it with any editor and build or compile with PlatformIO. You can even install the [PlatformIO extension](https://platformio.org/install/integration) for your favorite editor! Alternatively, you can open the file in the Arduino IDE, which will have you move it to a new folder and break the current PlatformIO setup.
+
+For debugging, the Arduino code's preconfigured outputs work well with the Arduino serial plotter. This is convenient for people using the Arduino IDE, but people using other editors and PlatformIO can also use the serial plotter without opening the code itself in the Arduino IDE.
