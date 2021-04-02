@@ -2,11 +2,13 @@
 
 An interactive visualization using an MPU-6050's gyroscope data as recorded by an Arduino.
 
+![demo gif](https://media.giphy.com/media/X6R6rY6JuSiALzCu80/giphy.gif "hi")
+
+*A sample of the visualization.*
+
 ## requirements
 
-This won't work with Python 3.9! This has only been tested successfully on Python 3.8; earlier versions may or may not work. 
-
-To make things easier, ensure Python is [in your PATH](https://datatofish.com/add-python-to-windows-path/).
+This won't work with Python 3.9! This has only been tested successfully on Python 3.8; earlier versions may or may not work.  To make things easier, ensure Python is [in your PATH](https://datatofish.com/add-python-to-windows-path/).
 
 ## setup
 
@@ -39,13 +41,25 @@ pio run -t upload
 
 ## use
 
+Wire up the sensor to the Arduino [like this](https://create.arduino.cc/projecthub/Nicholas_N/how-to-use-the-accelerometer-gyroscope-gy-521-6dfc19).
+
+When you open a new terminal session, be sure to activate the virtual environment before using the program.
+
+```shell
+./env/Scripts/activate
+```
+
 A command in the following form runs the visualization:
 
 ```shell
 whee.py [-h] [--port PORT] [--baud BAUD] [--delimiter DELIMITER] [--sample-rate SAMPLE_RATE] [--ready-flag READY_FLAG]
 ```
 
-During the visualization, hit the spacebar to switch coloring from shadows to normals.
+Use the `-h` option to see more info on each item.
+
+Keep the sensor steady until the program indicates that calibration has ended. During the visualization, hit the spacebar to switch coloring from shadows to normals.
+
+If calibration seems to go on forever, try hitting the reset button on the Arduino. Sometimes the serial interface isn't the most stable, so data like the *ready* flag can get lost.
 
 ### examples
 
