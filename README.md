@@ -2,7 +2,7 @@
 
 An interactive visualization using an MPU-6050's gyroscope data as recorded by an Arduino.
 
-![demo gif](https://media.giphy.com/media/X6R6rY6JuSiALzCu80/giphy.gif "hi")
+![demo gif](https://user-images.githubusercontent.com/20602415/113386208-9743f200-933e-11eb-86b8-3006353eb8ab.gif "hi")
 
 *A sample of the visualization.*
 
@@ -12,9 +12,9 @@ This won't work with Python 3.9! This has only been tested successfully on Pytho
 
 ## setup
 
-Clone or download and unzip this repository. Then, navigate to the project's root directory in a terminal.
+Clone or download and unzip this repository.
 
-If you've decided to keep the folder in your downloads, this might be something like:
+Then, navigate to the project's root directory in a terminal. If you've decided to keep the folder in your downloads, this might be something like:
 
 ```shell
 cd ~/Downloads/whee
