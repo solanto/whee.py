@@ -1,6 +1,6 @@
 # whee.py
 
-An interactive visualization using an MPU-6050's gyroscope data as recorded by an Arduino.
+An interactive visualization using an GY-521's gyroscope data as recorded by an Arduino.
 
 ![demo gif](https://user-images.githubusercontent.com/20602415/113386208-9743f200-933e-11eb-86b8-3006353eb8ab.gif "demo gif")
 
@@ -41,7 +41,7 @@ pio run -t upload
 
 ## use
 
-If you're using the GY-521, wire up the sensor to the Arduino [like this](https://create.arduino.cc/projecthub/Nicholas_N/how-to-use-the-accelerometer-gyroscope-gy-521-6dfc19).
+Wire up the sensor to the Arduino [like this](https://create.arduino.cc/projecthub/Nicholas_N/how-to-use-the-accelerometer-gyroscope-gy-521-6dfc19).
 
 When you open a new terminal session, be sure to activate the virtual environment before using the program.
 
