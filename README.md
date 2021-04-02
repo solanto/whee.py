@@ -41,7 +41,7 @@ pio run -t upload
 
 ## use
 
-Wire up the sensor to the Arduino [like this](https://create.arduino.cc/projecthub/Nicholas_N/how-to-use-the-accelerometer-gyroscope-gy-521-6dfc19).
+If you're using the GY-521, wire up the sensor to the Arduino [like this](https://create.arduino.cc/projecthub/Nicholas_N/how-to-use-the-accelerometer-gyroscope-gy-521-6dfc19).
 
 When you open a new terminal session, be sure to activate the virtual environment before using the program.
 
