@@ -1,6 +1,6 @@
 # whee.py
 
-An interactive visualization using an GY-521's gyroscope data as recorded by an Arduino.
+An interactive visualization using a GY-521's gyroscope data as recorded by an Arduino.
 
 ![demo gif](https://user-images.githubusercontent.com/20602415/113386208-9743f200-933e-11eb-86b8-3006353eb8ab.gif "demo gif")
 
