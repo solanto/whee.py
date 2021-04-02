@@ -2,7 +2,7 @@
 
 An interactive visualization using an MPU-6050's gyroscope data as recorded by an Arduino.
 
-![demo gif](https://user-images.githubusercontent.com/20602415/113386208-9743f200-933e-11eb-86b8-3006353eb8ab.gif "hi")
+![demo gif](https://user-images.githubusercontent.com/20602415/113386208-9743f200-933e-11eb-86b8-3006353eb8ab.gif "demo gif")
 
 *A sample of the visualization.*
 
