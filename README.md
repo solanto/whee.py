@@ -90,3 +90,7 @@ The visualization Python source is just `/whee.py`. I kept as much of the more I
 The Arduino source can be found at `/src/main.ino`. There, you can change outputs from the Arduino. Open it with your favorite editor and build or compile with PlatformIO. You can even install the [PlatformIO extension](https://platformio.org/install/integration) for your editor! Alternatively, you can open the file in the Arduino IDE, which will have you move it to a new folder and break the current PlatformIO setup.
 
 For debugging, the Arduino code's preconfigured outputs work well with the Arduino serial plotter. This is convenient for people using the Arduino IDE, but people using other editors and PlatformIO can also use the serial plotter without opening the code in the Arduino IDE.
+
+![plotter gif](https://user-images.githubusercontent.com/20602415/113387906-0e2eba00-9342-11eb-9f0d-9ebf5e8c6310.gif "plotter gif")
+
+*Data shown in the serial plotter.*
