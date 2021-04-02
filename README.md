@@ -6,7 +6,7 @@ An interactive visualization using an MPU-6050's gyroscope data as recorded by a
 
 This won't work with Python 3.9! This has only been tested successfully on Python 3.8, but earlier versions may or may not work. 
 
-To make things easier, ensure Python is [in your PATH]([How to add Python to Windows PATH - Data to Fish](https://datatofish.com/add-python-to-windows-path/)).
+To make things easier, ensure Python is [in your PATH](https://datatofish.com/add-python-to-windows-path/).
 
 ## setup
 
@@ -61,8 +61,6 @@ python whee.py COM5
 
 ## editing
 
-The visualization Python source is just `/whee.py`. I kept as much of the more IO-focused code as general as possible, and thehttps://www.ursinaengine.org/) graphics engine is a joy to use. Have fun!
+The visualization Python source is just `/whee.py`. I kept as much of the more IO-focused code as general as possible, and the [Ursina](https://www.ursinaengine.org/) graphics engine is a joy to use. Have fun!
 
 The Arduino source can be found at `/src/main.ino`. There, you can change outputs from the Arduino. Open it with any editor and build or compile with PlatformIO (or even with the integrated VS Code extension). Alternatively, open it in the Arduino IDE (which will ask you to move it to a new folder). As currently configured, the Arduino's outputs work well with the serial plotter.
-
-
