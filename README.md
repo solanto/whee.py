@@ -4,7 +4,7 @@ An interactive visualization using an MPU-6050's gyroscope data as recorded by a
 
 ## requirements
 
-This won't work with Python 3.9! This has only been tested successfully on Python 3.8, but earlier versions may or may not work. 
+This won't work with Python 3.9! This has only been tested successfully on Python 3.8; earlier versions may or may not work. 
 
 To make things easier, ensure Python is [in your PATH](https://datatofish.com/add-python-to-windows-path/).
 
