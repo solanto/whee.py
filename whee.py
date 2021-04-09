@@ -19,14 +19,14 @@ parser.add_argument("--baud", "-b",
     default = 9600
 )
 
-parser.add_argument("--delimiter", "-d",
+parser.add_argument("--delimiter","-d",
     help    = 'the csv-style delimiter (you may need to enter this in quotes; default: ",")',
     default = ","
 )
 
 parser.add_argument("--sample-rate", "-s",
-    help = "the rate in Hz at which the device sends output (default: 8000)",
-    default = 8000                    
+    help    = "the rate in Hz at which the device sends output (default: 8000)",
+    default = 8000
 )
 
 parser.add_argument("--ready-flag", "-f",
