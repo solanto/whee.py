@@ -52,7 +52,7 @@ When you open a new terminal session, be sure to activate the virtual environmen
 A command in the following form runs the visualization:
 
 ```shell
-whee.py [-h] [--port PORT] [--baud BAUD] [--delimiter DELIMITER] [--sample-rate SAMPLE_RATE] [--ready-flag READY_FLAG]
+python whee.py [-h] [--port PORT] [--baud BAUD] [--delimiter DELIMITER] [--sample-rate SAMPLE_RATE] [--ready-flag READY_FLAG]
 ```
 
 Use the `-h` option to see more info on each item.
